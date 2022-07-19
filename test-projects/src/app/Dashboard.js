@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className='flex flex-wrap  gap-4 m-8 '>
       <div class='bg-white flex flex-col items-center shadow-md border border-gray-200 rounded-lg max-w-sm'>
-        <img className='rounded-t-lg' src='/images/car0.png' alt='' />
+        <img className='rounded-t-lg' src='/images/calculator.png' alt='' />
 
         <div className='flex flex-col  items-center justify-center p-5'>
           <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2'>
