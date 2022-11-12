@@ -68,13 +68,17 @@ const WordleScreen = () => {
   return (
 
     <div className="flex flex-col gap-20 h-screen justify-center items-center">
+
+      <div className="">
+        <h1>React World Game</h1>
+      </div>
       <div className='flex flex-col gap-1'>
         {
       guesses.map((guess, index) => {
         const isCurrentGuess = index === guesses.findIndex(val => val == null)
         return <Line
                 key={index} 
-                guess = { isCurrentGuess ? currentGuess : guess ?? ''}
+                guess = { isCurrentGuess ? currentGuess : guess ?? '     '}
                 isFinal = { !isCurrentGuess && guess != null }
                 answer = { answer.toLowerCase() }
               /> 
@@ -93,7 +97,8 @@ const WordleScreen = () => {
 const Line = ({ guess, isFinal, answer}) => {
 
   const tiles = []
-  
+
+ 
   for (let i = 0; i < wordLength; i++) {  
 
     const char = guess[i]
@@ -127,5 +132,7 @@ const Line = ({ guess, isFinal, answer}) => {
 
   return <div className='flex gap-1 '>{tiles}</div>
 }
+
+
 
 export default WordleScreen
